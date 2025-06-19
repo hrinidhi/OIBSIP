@@ -1,29 +1,15 @@
-let input = document.getElementById("input");
-let result = document.getElementById("result");
-let expression = "";
+const container = document.querySelector(".petal-container");
 
-const buttons = document.querySelectorAll("button");
-buttons.forEach(button => {
-  button.addEventListener("click", () => {
-    const value = button.textContent;
+function createPetal() {
+  const petal = document.createElement("div");
+  petal.classList.add("petal");
+  petal.style.left = Math.random() * 100 + "vw";
+  petal.style.animationDuration = 3 + Math.random() * 2 + "s";
+  container.appendChild(petal);
 
-    if (value === "clear") {
-      expression = "";
-      input.textContent = "";
-      result.textContent = "0";
-    } else if (value === "del") {
-      expression = expression.slice(0, -1);
-      input.textContent = expression;
-    } else if (value === "ENTER") {
-      try {
-        let final = expression.replace(/x/g, "*").replace(/÷/g, "/");
-        result.textContent = eval(final);
-      } catch {
-        result.textContent = "Error";
-      }
-    } else {
-      expression += value;
-      input.textContent = expression;
-    }
-  });
-});
+  setTimeout(() => {
+    petal.remove();
+  }, 5000);
+}
+
+setInterval(createPetal, 300);
