@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Authentication</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <h1>🔐 Login Authentication</h1>
 
+      <!-- Register -->
+      <div class="card" id="register-box">
+        <h2>Register</h2>
+        <input type="text" id="reg-username" placeholder="Enter username" />
+        <input type="password" id="reg-password" placeholder="Enter password" />
+        <button onclick="register()">Register</button>
+      </div>
+
+      <!-- Login -->
+      <div class="card" id="login-box">
+        <h2>Login</h2>
+        <input type="text" id="login-username" placeholder="Enter username" />
+        <input type="password" id="login-password" placeholder="Enter password" />
+        <button onclick="login()">Login</button>
+      </div>
+
+      <!-- Protected -->
+      <div class="card" id="secure-box" style="display: none;">
+        <h2>Welcome, <span id="user-name"></span> 👋</h2>
+        <p>You are now logged in. This is a protected area.</p>
+        <button class="logout" onclick="logout()">Logout</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
