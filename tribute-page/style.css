@@ -1,0 +1,164 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+    background-color: #fdf6f6;
+    color: #333;
+    overflow-x: hidden;
+  }
+  
+  .hero {
+    background-color: #fff0f3;
+    text-align: center;
+    padding: 3rem 1rem;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.3rem;
+    color: #c2185b;
+  }
+  
+  .years {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  .play-button {
+    margin-top: 1.5rem;
+    border: 2px solid #c2185b;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 46px;
+    font-size: 1.2rem;
+    color: #c2185b;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .quote-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .quote {
+    flex: 1;
+    font-size: 1.5rem;
+    font-style: italic;
+    padding-right: 1rem;
+    color: #444;
+  }
+  
+  .hero-img {
+    max-width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  }
+  
+  .bio-section {
+    padding: 3rem 2rem;
+    background: #f9f9f9;
+  }
+  
+  .bio-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #c2185b;
+  }
+  
+  .bio-section p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #444;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  /* 🎥 Tribute Circle Button */
+  .video-circle-section {
+    text-align: center;
+    padding: 2rem;
+    background-color: #fff;
+  }
+  
+  .video-circle-section h2 {
+    font-size: 1.8rem;
+    color: #c2185b;
+    margin-bottom: 1.5rem;
+  }
+  
+  .circle-play {
+    display: inline-block;
+    border: 2px solid #c2185b;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    line-height: 50px;
+    font-size: 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    color: #c2185b;
+    transition: background 0.3s ease;
+  }
+  
+  .circle-play:hover {
+    background-color: #f8bbd0;
+  }
+  
+  /* 💖 Footer */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #888;
+    background-color: #fff0f3;
+    border-top: 1px solid #eee;
+  }
+  
+  /* ✨ Fade-in Animation */
+  .fade-in {
+    opacity: 0;
+    animation: fade 2s ease-in forwards;
+  }
+  
+  @keyframes fade {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* 🌹 Petals */
+  .petal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 10;
+  }
+  
+  .petal {
+    width: 15px;
+    height: 15px;
+    background: radial-gradient(circle, #e91e63 30%, transparent 70%);
+    border-radius: 50%;
+    position: absolute;
+    animation: fall linear infinite;
+    opacity: 0.8;
+  }
+  
+  @keyframes fall {
+    0% {
+      transform: translateY(-100px) rotate(0deg);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0.7;
+    }
+  }
+  
